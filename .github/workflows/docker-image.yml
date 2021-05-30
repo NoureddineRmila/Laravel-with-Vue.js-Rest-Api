@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: rmilaweb/laravelrestapi:${date +%s}
+          tags: rmilaweb/laravelrestapi:test-release-${{ steps.date.outputs.date }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
